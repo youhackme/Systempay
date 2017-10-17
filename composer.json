@@ -1,0 +1,11 @@
+{
+  "require": {
+    "php": ">=5.3.9",
+    "vlucas/phpdotenv": "^2.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Systempay\\": "src/"
+    }
+  }
+}
