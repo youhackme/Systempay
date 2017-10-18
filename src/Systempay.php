@@ -12,12 +12,13 @@ class Systempay
 
     public function __construct($siteId)
     {
-        $this->key    = '3900650991691008';
+
+        $this->key    = env("SYSTEMPAY_{$siteId}_KEY");
         $this->url    = 'https://paiement.systempay.fr/vads-payment/';
         $this->config = require('config.php');
         $this->params = $this->config[$siteId]['params'];
         $this->set_site_id($siteId);
-        $this->set_ctx_mode($this->config[$siteId]['env']);
+        $this->set_ctx_mode(env("SYSTEMPAY_{$siteId}_ENV"));
 
     }
 

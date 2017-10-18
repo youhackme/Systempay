@@ -9,12 +9,16 @@
 include('vendor/autoload.php');
 
 
+$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv->load();
+
 $systempay = new \Systempay\Systempay('41609008');
 
-$systempay->set_amount(1500)
-          ->set_trans_id('000012')
+$systempay->set_amount(1000)
+          ->set_trans_id('000013')
           ->set_cust_name('Hyder Bangash')
           ->set_url_return('http://playground.stella-telecom.devlocal/systempay/');
+
 //create the signature
 $systempay->set_signature();
 //create html systempay call form
