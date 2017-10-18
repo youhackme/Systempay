@@ -3,7 +3,6 @@ return [
 
     '41609008' => [
         'key'    => '3900650991691008',
-        'env'    => 'TEST',
         'params' => [
             //Put here your generals payment call parameters
             'vads_page_action'    => 'PAYMENT',
