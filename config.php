@@ -1,7 +1,7 @@
 <?php
 return [
 
-    '41609008' => [
+    env('SYSTEMPAY_SITE_ID') => [
         'key'    => env('SYSTEMPAY_KEY'),
         'params' => [
             //Put here your generals payment call parameters
@@ -15,6 +15,6 @@ return [
         ],
     ],
     //Systempay's url
-    'url'      => env('SYSTEMPAY_URL'),
+    'url'                    => env('SYSTEMPAY_URL'),
 
 ];
