@@ -6,6 +6,9 @@
   "autoload": {
     "psr-4": {
       "Systempay\\": "src/"
-    }
+    },
+    "files": [
+      "helpers.php"
+    ]
   }
 }
