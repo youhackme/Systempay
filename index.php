@@ -12,7 +12,7 @@ include('vendor/autoload.php');
 $dotenv = new Dotenv\Dotenv(__DIR__);
 $dotenv->load();
 
-$systempay = new \Systempay\Systempay('41609008');
+$systempay = new \Systempay\Systempay(env('SYSTEMPAY_SITE_ID'));
 
 $systempay->set_amount(1000)
           ->set_trans_id('000013')
