@@ -113,7 +113,7 @@ class Systempay
         if ($amount) {
             $this->params['vads_amount'] = 100 * $amount;
         } else {//calcul du montant à partir du tableau de paramètre
-            $this->array_where($this->params, function ($key, $value) {
+            array_where($this->params, function ($key, $value) {
                 if (preg_match("/vads_product_amount([0-9]+)/", $key, $match)) {
                     $this->params['vads_amount'] += $this->params["vads_product_qty{$match[1]}"] * $value;
                 }
@@ -175,27 +175,5 @@ class Systempay
 
         return $this;
     }
-
-
-    /**
-     * Filter the array using the given Closure.
-     *
-     * @param         $array
-     * @param Closure $callback
-     *
-     * @return array
-     */
-    public function array_where($array, $callback)
-    {
-        $filtered = [];
-        foreach ($array as $key => $value) {
-            if (call_user_func($callback, $key, $value)) {
-                $filtered[$key] = $value;
-            }
-        }
-
-        return $filtered;
-    }
-
 
 }
