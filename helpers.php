@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Hyder
- * Date: 18/10/2017
- * Time: 09:51
- */
-
 
 /**
  * Filter the array using the given Closure.
