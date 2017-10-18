@@ -2,7 +2,7 @@
 return [
 
     '41609008' => [
-        'key'    => '3900650991691008',
+        'key'    => env('SYSTEMPAY_KEY'),
         'params' => [
             //Put here your generals payment call parameters
             'vads_page_action'    => 'PAYMENT',
@@ -15,6 +15,6 @@ return [
         ],
     ],
     //Systempay's url
-    'url'      => 'https://paiement.systempay.fr/vads-payment/',
+    'url'      => env('SYSTEMPAY_URL'),
 
 ];
