@@ -15,7 +15,7 @@ $dotenv->load();
 $systempay = new \Systempay\Systempay(env('SYSTEMPAY_SITE_ID'));
 
 $systempay->set_amount(1000)
-          ->set_trans_id('000013')
+          ->set_trans_id('000014')
           ->set_cust_name('Hyder Bangash')
           ->set_url_return('http://playground.stella-telecom.devlocal/systempay/');
 
